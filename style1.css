@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    transition: .5s;
+}
+
+.nav{
+    display:flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%; 
+}
+.logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+a{
+    margin: 15px;
+    color:black;
+    font-weight: 100;
+    text-decoration: none;
+    
+    transition: all 0.3s ease;
+}
+a:hover{
+    background-color:rgba(255, 255, 255, 0.171);
+    padding:8px;
+
+
+}
+.banner{
+    position: relative;
+    background-image: url(images/paul-gilmore-oc-PqSYz7UU-unsplash.jpg);
+    width: 100%;
+    height:80vh;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover ;
+    background-size: cover;
+}
+
+
+.text{
+
+    animation: type 3s steps(52);
+    overflow:hidden;
+    color: gray;
+    font-size: 20px;
+    white-space: nowrap;
+    font-family:cursive;
+    border-right: 4px solid grey;
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 52ch;
+   
+
+}
+@keyframes type{
+    0%{
+        width:0ch;
+    }
+    100%{
+        width: 52ch;
+    }
+
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 80px 50px 80px;
+}
+.column1{
+    background-color:pink;
+    height: 400px;
+    text-align:center;
+    
+    color: white;
+}
+.column2{
+    background-color:lightsalmon;
+    height: 400px;
+    text-align:center;
+    color: white;
+}
+.column3{
+    background-color:plum;
+    height: 400px;
+    text-align:center;
+    color: white;
+}
+.row p{
+    padding-top: 60px;
+}
+.about{
+    margin: 50px 80px 50px 80px;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin-top: 40px;
+    
+}
+.col-1{
+    background-color: darkslategrey;
+    height: 400px;
+}
+.pic{
+    height: 300px;
+    width: 85%;
+    background-image: url("images/annie-spratt-vs6a4EHj_Ro-unsplash_adobespark.jpg");
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.col-2{
+    background-color:olive;
+    height: 400px;
+}
+.col-3{
+    background-color:darkgoldenrod;
+    height: 400px;
+}
+.col-4{
+    background-color:olivedrab;
+    height: 400px;
+}
+.col-5{
+    background-color:darkgreen;
+    height: 400px;
+}
+.col-6{
+    background-color:darkkhaki;
+    height: 400px;
+}
+.col-7{
+    background-color:darkslategrey;
+    height: 400px;
+}
+.col-8{
+    background-color: seagreen;
+    height: 400px;
+}
+.container p{
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+}
+
+footer{
+    height: 100px;
+    background-color:black;
+    margin-top: 40px;
+    text-align: center;
+}
+footer p{
+    color: white;
+    padding-top: 40px;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:500px ;
+    background-color: black;
+    
+}
+.box{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation:animate 20s linear infinite ;
+}
+@keyframes animate{
+    0%{
+        transform: perspective( 1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective( 1000px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100% ;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100% ;
+    height: 100%;
+    object-fit: cover ;
+}
+.wrapper{
+    width: 900px;
+    height: 700px;
+    margin: 70px auto 0 auto;
+
+}
+.single-price{
+    width: 33%;
+    background: #262626;
+    float: left;
+    margin-top: 2%;
+    box-shadow: 1px 1px 20px rbga(0,0,0,0.5);
+    text-align: center;
+    transition: 0.9s;
+}
+.price{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #da4357;
+    margin: 5% auto 0 auto;
+    text-align: center;
+}
+.deals{
+    margin-top: 10px;
+}
+.single-price h1{
+    font-size: 18px;
+    color: #fff;
+    line-height: 3;
+    text-transform: uppercase;
+}
+.price h2{
+    font-size: 38px;
+    color: #fff;
+    padding-top: 30px;
+}
+.deals h4{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    
+}
+.single-price:hover{
+    background: #da4357;
+    color: #fff;
+    box-shadow: 0 0  15px rgba(0,0,0,1);
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 25px;
+}
+.single-price:hover.price{
+    border-color: #fff;
+}
+.single-price a{
+    text-decoration: none;
+    background: #da4357;
+    color: #fff;
+    padding: 10px 60px;
+    display: inline-block;
+    margin: 10% auto;
+    font-weight: bold;
+}
+.single-price:hover a{
+    background: #262626;
+    color: #fff;
+
+}
+footer{
+    
+    height: 120px;
+    background: black;
+
+}
+footer p{
+    color: white;
+}
+
+ 
